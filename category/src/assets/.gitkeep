@@ -1,0 +1,31 @@
+[{
+    id:1 ,
+    name:'first category' ,
+    parent_id: null ,
+    children : [{
+        id:2 ,
+        name:'second category' ,
+        parent_id:1 ,
+        children : [{
+            id:4 ,
+            name:'forth category' ,
+            parent_id :2 ,
+            children : null
+        }]
+    } , {
+        id:5 ,
+        name:'fifth category' ,
+        parent_id:1 ,
+        children:null
+    }]
+} , {
+    id: 3 ,
+    name:'third category' ,
+    parent_id:null ,
+    children :[{
+        id:6 ,
+        name:'sixth category' ,
+        parent_id:3 ,
+        children:null
+    }]
+}]

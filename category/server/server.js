@@ -10,7 +10,9 @@ const categoryRoutes= require('./routes/category.routes')
 
 app.use(cors()) ;
 
-app.use('/api',categoryRoutes) ;
+app.use('/api',categoryRoutes)
+
+
 
 const PORT = 4000 ;
 app.listen(PORT,() => {
