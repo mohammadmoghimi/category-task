@@ -1,16 +1,17 @@
-<!-- In your Angular component template -->
-<h1>hey2</h1>
-
+<!-- 
 <div class="category-grid">
     <div *ngFor="let category of categories" class="category-item">
-        <!-- Display category information as needed -->
-        <p>ID: {{ category.id }}</p>
         <p>Name: {{ category.name }}</p>
-        <!-- Add more properties as needed -->
-
-        <!-- If you want to display children, you can use recursion or another loop -->
-        <!-- <div *ngIf="category.children && category.children.length > 0">
-            <app-your-component [categories]="category.children"></app-your-component>
-        </div> -->
+        <button (click)="onClick(category)">children</button>
+        <div *ngIf="category.children">
+            <div *ngFor="let child of category.children" class="child-category">
+                <p>Name : {{ child.name }}</p>
+            </div>
+        </div>
+        <p>-------------</p>
     </div>
+</div> -->
+
+<div class="category-menu">
+    <app-category-item *ngFor="let category of categories" [category]="category"></app-category-item>
 </div>
