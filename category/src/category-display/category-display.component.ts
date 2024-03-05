@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { ICategory } from '../interface/category.interface';
 import { CategoryItemComponent } from '../category-item/category-item.component';
+import {MatListModule} from '@angular/material/list';
 
 @Component({
   selector: 'app-category-display',
   standalone: true,
-  imports: [CommonModule , CategoryItemComponent],
+  imports: [CommonModule , CategoryItemComponent , MatListModule],
   templateUrl: './category-display.component.html',
   styleUrl: './category-display.component.scss'
 })

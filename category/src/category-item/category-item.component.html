@@ -1,10 +1,9 @@
-<div class="category-item">
-    <p>Name:{{category?.name}}</p>
-    <button *ngIf="category?.children" (click)="toggleChildren()">
+<li class="list-group-item">
+    <p>{{category?.name}}</p>
+    <button class="btn btn-primary" *ngIf="category?.children" (click)="toggleChildren()" >
         {{ showChildren ? 'Hide Children' : 'Show Children'}}
     </button>
     <div *ngIf="showChildren">
         <app-category-item *ngFor="let child of category?.children" [category]="child"></app-category-item>
     </div>
-    <p>-------------</p>
-</div>
+</li>

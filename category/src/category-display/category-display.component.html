@@ -1,17 +1,3 @@
-<!-- 
-<div class="category-grid">
-    <div *ngFor="let category of categories" class="category-item">
-        <p>Name: {{ category.name }}</p>
-        <button (click)="onClick(category)">children</button>
-        <div *ngIf="category.children">
-            <div *ngFor="let child of category.children" class="child-category">
-                <p>Name : {{ child.name }}</p>
-            </div>
-        </div>
-        <p>-------------</p>
-    </div>
-</div> -->
-
-<div class="category-menu">
+<ul class="list-group">
     <app-category-item *ngFor="let category of categories" [category]="category"></app-category-item>
-</div>
+</ul> 
