@@ -1,0 +1,15 @@
+
+:host {
+    display: flex;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    // justify-content: flex-start;
+    margin-left: 20px; /* Adjust the margin based on your design */
+    margin-top: 20px; /* Adjust the margin based on your design */
+    border: 1px solid #ccc; /* Add a border to the container */
+    padding: 10px; 
+    width: 300px;
+  }

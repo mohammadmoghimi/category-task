@@ -4,11 +4,14 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ICategory } from '../interface/category.interface';
 import { CategoryItemComponent } from '../category-item/category-item.component';
 import {MatListModule} from '@angular/material/list';
+import {MatButtonModule} from '@angular/material/button';
+import {MatMenuModule} from '@angular/material/menu';
 
 @Component({
   selector: 'app-category-display',
   standalone: true,
-  imports: [CommonModule , CategoryItemComponent , MatListModule],
+  imports: [CommonModule , CategoryItemComponent,
+     MatButtonModule , MatListModule , MatMenuModule],
   templateUrl: './category-display.component.html',
   styleUrl: './category-display.component.scss'
 })
@@ -32,7 +35,7 @@ export class CategoryDisplayComponent implements OnInit{
       }) ;
   } ;
 
-  onClick(category : ICategory):void{
+    onClick(category : ICategory):void{
     category.children = category.children || []
      
   }
