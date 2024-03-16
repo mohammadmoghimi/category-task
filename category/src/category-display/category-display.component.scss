@@ -1,15 +1,39 @@
 
-:host {
-    display: flex;
-  }
+// :host {
+//     display: flex;
+//   }
   
-  .container {
-    display: flex;
-    flex-direction: column;
-    // justify-content: flex-start;
-    margin-left: 20px; /* Adjust the margin based on your design */
-    margin-top: 20px; /* Adjust the margin based on your design */
-    border: 1px solid #ccc; /* Add a border to the container */
-    padding: 10px; 
-    width: 300px;
-  }
+//   .container {
+//     display: flex;
+//     flex-direction: column;
+//     // justify-content: flex-start;
+//     margin-left: 20px; /* Adjust the margin based on your design */
+//     margin-top: 20px; /* Adjust the margin based on your design */
+//     border: 1px solid #ccc; /* Add a border to the container */
+//     padding: 10px; 
+//     width: 300px;
+//   }
+
+:host {
+  display: flex;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 300px;
+}
+
+.category-item {
+  margin-bottom: 10px; /* Adjust spacing between category items */
+}
+
+.children-container {
+  margin-left: 20px; /* Adjust indentation of children categories */
+  border-left: 1px solid #ccc; /* Add a border to separate children categories */
+  padding-left: 10px; /* Add padding to align children categories */
+}

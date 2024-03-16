@@ -1,0 +1,41 @@
+// .submenu {
+//     position: absolute;
+//     top: 0;
+//     left: 100%;
+//   }
+// .menu {
+//     font-family: Arial, sans-serif;
+//   }
+  
+//   .menu ul {
+//     list-style-type: none;
+//     padding-left: 0;
+//   }
+  
+//   .menu-item {
+//     cursor: pointer;
+//   }
+  
+//   .menu-item:hover {
+//     background-color: #f0f0f0;
+//   }
+  
+//   .menu-item::before {
+//     content: '\25B8';
+//     display: inline-block;
+//     margin-right: 5px;
+//   }
+  
+//   .menu-item.open::before {
+//     content: '\25BE';
+//   }
+  
+//   .menu-item.open + ul {
+//     display: block;
+//   }
+  
+//   .menu ul {
+//     display: none;
+//     padding-left: 20px;
+//   }
+  

@@ -1,0 +1,30 @@
+<!-- <ul>
+    <li *ngFor="let category of categories">
+      <a (click)="toggleMenu(category)">{{ category.name }}</a>
+      <ul *ngIf="category.showChild && category.children && category.children.length > 0" class="submenu">
+        <li *ngFor="let childCategory of category.children">
+          <a [routerLink]="['/category', childCategory.id]">{{ childCategory.name }}</a>
+        </li>
+      </ul>
+    </li>
+  </ul> -->
+  <div class="menu">
+    <ul>
+      <li *ngFor="let category of categories">
+        <span class="menu-item" (click)="toggleSubMenu($event)">{{ category.name }}</span>
+        <ul *ngIf="category.children">
+          <ng-container *ngTemplateOutlet="submenu; context: { $implicit: category.children }"></ng-container>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  
+  <ng-template #submenu let-children>
+    <li *ngFor="let subcategory of children">
+      <span class="menu-item">{{ subcategory.name }}</span>
+      <ul *ngIf="subcategory.children">
+        <ng-container *ngTemplateOutlet="submenu; context: { $implicit: subcategory.children }"></ng-container>
+      </ul>
+    </li>
+  </ng-template>
+  
