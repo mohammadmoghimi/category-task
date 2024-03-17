@@ -3,11 +3,10 @@
   <div class="button-container">
       <button class="btn btn-primary" *ngIf="category?.children" (click)="toggleChildren()">
           {{ showChildren ? 'Hide Children' : 'Show Children' }}
-      </button>
-      
+      </button>    
   </div>
   
-  <div *ngIf="showChildren" class="children-container">
-      <app-category-item *ngFor="let child of category?.children" [category]="child"></app-category-item>
-  </div>
+</div>
+<div *ngIf="showChildren" class="children-container">
+    <app-category-item *ngFor="let child of category?.children" [category]="child"></app-category-item>
 </div>
